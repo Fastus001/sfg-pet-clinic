@@ -1,4 +1,4 @@
-package fastus.springframework.sfgpetclinic;
+package fastus.springframework.sfgpetclinic.sfgpetclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
