@@ -4,6 +4,14 @@
 /build/www/**
 /src/test/javascript/coverage/
 /src/test/javascript/PhantomJS*/
+pet-clinic-data/target/
+pet-clinic-web/target/
+*.releaseBackup
+release.properties
+
+
+
+
 
 ######################
 # Node
@@ -69,6 +77,7 @@ local.properties
 ######################
 /log/
 /target/
+
 
 ######################
 # Gradle
