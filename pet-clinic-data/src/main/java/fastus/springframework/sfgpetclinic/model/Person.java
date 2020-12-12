@@ -1,4 +1,4 @@
-package fastus.springframework.model;
+package fastus.springframework.sfgpetclinic.model;
 
 public class Person {
     private String firstName;
