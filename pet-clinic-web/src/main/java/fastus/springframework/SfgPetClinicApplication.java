@@ -1,4 +1,4 @@
-package fastus.springframework.sfgpetclinic;
+package fastus.springframework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

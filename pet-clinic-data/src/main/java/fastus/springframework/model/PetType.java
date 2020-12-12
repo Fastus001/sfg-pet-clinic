@@ -1,4 +1,4 @@
-package fastus.springframework.sfgpetclinic.model;
+package fastus.springframework.model;
 
 public class PetType {
 

@@ -1,4 +1,4 @@
-package fastus.springframework.sfgpetclinic.model;
+package fastus.springframework.model;
 
 import java.time.LocalDate;
 
