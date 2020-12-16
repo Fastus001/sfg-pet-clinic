@@ -16,7 +16,7 @@
     </parent>
     <groupId>fastus.springframework</groupId>
     <artifactId>sfg-pet-clinic</artifactId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>0.0.7</version>
 
     <name>sfg-pet-clinic</name>
     <description>SFG Pet Clinic Project</description>
@@ -46,7 +46,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:Fastus001/sfg-pet-clinic.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>sfg-pet-clinic-0.0.7</tag>
     </scm>
 
 </project>
