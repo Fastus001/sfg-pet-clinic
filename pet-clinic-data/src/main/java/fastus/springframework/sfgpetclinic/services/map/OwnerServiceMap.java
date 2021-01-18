@@ -5,13 +5,12 @@ import fastus.springframework.sfgpetclinic.model.Pet;
 import fastus.springframework.sfgpetclinic.services.OwnerService;
 import fastus.springframework.sfgpetclinic.services.PetService;
 import fastus.springframework.sfgpetclinic.services.PetTypeService;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-@Profile("springdatajpa")
+
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
