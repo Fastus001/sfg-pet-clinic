@@ -6,5 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * Created by Tom - 18.01.2021
  */
-public interface PerRepository extends CrudRepository<Pet,Long> {
+public interface PetRepository extends CrudRepository<Pet,Long> {
+
 }
