@@ -2,6 +2,7 @@ package fastus.springframework.sfgpetclinic.services.map;
 
 import fastus.springframework.sfgpetclinic.model.Speciality;
 import fastus.springframework.sfgpetclinic.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -10,6 +11,7 @@ import java.util.Set;
  * Created by Tom - 28.12.2020
  */
 @Service
+@Profile({"default","map"})
 public class SpecialityMapService extends AbstractMapService<Speciality,Long> implements SpecialtyService {
     @Override
     public Set<Speciality> findAll() {
