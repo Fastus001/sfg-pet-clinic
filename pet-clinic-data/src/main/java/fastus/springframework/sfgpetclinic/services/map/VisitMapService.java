@@ -2,12 +2,14 @@ package fastus.springframework.sfgpetclinic.services.map;
 
 import fastus.springframework.sfgpetclinic.model.Visit;
 import fastus.springframework.sfgpetclinic.services.VisitService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 /**
  * Created by Tom - 19.01.2021
  */
+@Service
 public class VisitMapService extends AbstractMapService<Visit,Long> implements VisitService {
 
 
