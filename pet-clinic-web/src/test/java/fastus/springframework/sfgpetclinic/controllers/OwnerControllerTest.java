@@ -71,6 +71,5 @@ class OwnerControllerTest {
                 .andExpect(view().name("notImplemented"));
 
         verifyNoInteractions(ownerService);
-
     }
 }
