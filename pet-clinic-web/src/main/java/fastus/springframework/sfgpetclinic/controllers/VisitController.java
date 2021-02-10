@@ -54,7 +54,7 @@ public class VisitController {
             return PETS_CREATE_OR_UPDATE_VISIT_FORM;
         }else {
             visitService.save(visit);
-            return "redirect:/owners/" + visit.getPet().getOwner().getId();
+            return "redirect:/owners/{ownerID}";
         }
     }
 
