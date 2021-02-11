@@ -58,7 +58,7 @@ class OwnerControllerTest {
         verifyNoInteractions(ownerService);
     }
 
-    @SuppressWarnings("unchecked")
+
     @Test
     void processFindFormReturnMany() throws Exception {
         when(ownerService.findAllByLastNameLike(anyString()))
