@@ -19,7 +19,7 @@ import java.util.Map;
  */
 @Controller
 public class VisitController {
-    private static final String PETS_CREATE_OR_UPDATE_VISIT_FORM = "pets/createOrUpdateVisitForm";
+    private static final String  PETS_CREATE_OR_UPDATE_VISIT_FORM= "pets/createOrUpdateVisitForm";
     private final VisitService visitService;
     private final PetService petService;
 
@@ -51,32 +51,31 @@ public class VisitController {
      * @return Pet
      */
     @ModelAttribute("visit")
-    public Visit loadPetWithVisit(@PathVariable("petId") Long petId, Map<String, Object> model){
+    public Visit loadPetWithVisit(@PathVariable("petId") Long petId, Map<String, Object> model) {
         Pet pet = petService.findById(petId);
         model.put("pet", pet);
-        Visit visit = Visit.builder().build();
+        Visit visit = new Visit();
         pet.getVisits().add(visit);
         visit.setPet(pet);
         return visit;
     }
 
-    //spring MVC calls method load PetWithVisit(...) before initNewVisitForm is called
+    // Spring MVC calls method loadPetWithVisit(...) before initNewVisitForm is called
     @GetMapping("/owners/*/pets/{petId}/visits/new")
-    public String initNewVisitForm(@PathVariable Long petId, Map<String, Object> model){
+    public String initNewVisitForm(@PathVariable("petId") Long petId, Map<String, Object> model) {
         return PETS_CREATE_OR_UPDATE_VISIT_FORM;
     }
 
-    //spring MVC calls method loadPetWithVisit(..) before processNewVisitForm is called
-    @PostMapping( "/owners/{ownerId]/pets/{petId}/visits/new")
-    public String processNewVisitForm(@Valid Visit visit, BindingResult result){
-        if(result.hasErrors()){
+    // Spring MVC calls method loadPetWithVisit(...) before processNewVisitForm is called
+    @PostMapping("/owners/{ownerId}/pets/{petId}/visits/new")
+    public String processNewVisitForm(@Valid Visit visit, BindingResult result) {
+        if (result.hasErrors()) {
             return PETS_CREATE_OR_UPDATE_VISIT_FORM;
-        }else {
+        } else {
             visitService.save(visit);
-            return "redirect:/owners/{ownerID}";
+
+            return "redirect:/owners/{ownerId}";
         }
     }
-
-
 
 }
