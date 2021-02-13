@@ -79,9 +79,6 @@ class VisitControllerTest {
                 .standaloneSetup(controller).build();
     }
 
-    @Test
-    void loadPetWithVisit() {
-    }
 
     @Test
     void initNewVisitForm() throws Exception {
